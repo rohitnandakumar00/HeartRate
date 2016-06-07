@@ -35,6 +35,7 @@ import com.dd.processbutton.FlatButton;
 
 import exhaustedcoders.heartrate.HowYaFeeling;
 import exhaustedcoders.heartrate.R;
+import exhaustedcoders.heartrate.StoreBPM;
 
 /**
  * This class extends Activity to handle a picture preview, process the preview
@@ -219,6 +220,8 @@ public class HeartRateMonitor extends Activity {
 			long difference = (currentTime - startTime) / 1000;
 			Log.i("Difference", difference + "");
 			if (difference >= 20) {
+				StoreBPM book = new StoreBPM(bpm);
+				book.save();
 				timer.setImageResource(R.mipmap.hundred);
 			}
 			else if (difference >= 19) timer.setImageResource(R.mipmap.ninety);
