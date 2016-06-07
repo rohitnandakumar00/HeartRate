@@ -391,7 +391,7 @@ public class HeartRateMonitor extends Activity {
 	private static SurfaceHolder.Callback surfaceCallback = new SurfaceHolder.Callback() {
 
 		/**
-		 * {@inheritDoc}
+		 * {@inheritDoc} 
 		 */
 		@Override
 		public void surfaceCreated(SurfaceHolder holder) {
